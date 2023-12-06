@@ -1,0 +1,23 @@
+color de fondo o letra > HEX #101820
+fuentes
+Roboto
+pacifico
+
+imagenes atribuir
+<a href="https://www.freepik.es/foto-gratis/deliciosa-comida-italiana_938631.htm#query=pizza&position=4&from_view=search&track=sph&uuid=d64c8d29-091d-446c-adfb-1c0445507210">Imagen de jcstudio</a> en Freepik
+
+<a href="https://www.freepik.es/vector-gratis/ingredientes-pizza-costuras_1389751.htm#query=pizza&position=21&from_view=search&track=sph&uuid=93b83527-a6a8-42a2-93b9-70ccde6e99da">Imagen de sergey_kandakov</a> en Freepik
+
+Imagen de <a href="https://pixabay.com/es/users/petrovhey-2830663/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=3000285">petrovhey</a> en <a href="https://pixabay.com/es//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=3000285">Pixabay</a>
+
+<a href="https://www.freepik.es/vector-gratis/fondo-comida-dibujada-mano_72159777.htm#query=background%20pizza&position=2&from_view=search&track=ais&uuid=0d8d3d1a-fc35-4b96-b65e-d30cbc3a6f60">Imagen de pikisuperstar</a> en Freepik
+
+Imagen de <a href="https://www.freepik.es/vector-gratis/fondo-pizza-dibujada-mano_73940775.htm#query=background%20pizza&position=26&from_view=search&track=ais&uuid=0d8d3d1a-fc35-4b96-b65e-d30cbc3a6f60">Freepik</a>
+
+font-family: 'Fira Code', monospace;
+font-family: 'Inter', sans-serif;
+font-family: 'Odibee Sans', sans-serif;
+font-family: 'Pacifico', cursive;
+font-family: 'Poppins', sans-serif;
+font-family: 'Raleway', sans-serif;
+font-family: 'Roboto', sans-serif;
