@@ -1,12 +1,13 @@
 * {
   margin: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: "Poppins";
   color: #101820;
-  scroll-behavior: smooth;
+
   /* background-color: #eee; */
   /* background-color: rgb(204, 204, 172, 0.3); */
   /* background-color: #eee; */
@@ -18,6 +19,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 50px;
+  background-color: white;
   /* background-color: rgb(255, 255, 255, 0.5); */
   z-index: 10;
   backdrop-filter: blur(5px);
@@ -68,7 +70,58 @@ body {
   /* padding-bottom: 5px; */
 }
 
-/* Navegacion mobile */
+/* Navegacion mobile ********************************/
+.menu-flotante-mobile {
+  /* pointer-events: none; */
+
+  /* z-index: 1; */
+  /* translate: 100% 0; */
+  right: 0px;
+  top: 0px;
+  bottom: 0;
+  padding: 10px 15px;
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  z-index: 100;
+  display: none;
+  background-color: #2b292a;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.lista-menu {
+  padding: 0;
+}
+
+.lista-menu > li {
+  list-style: none;
+  margin: 25px 0px;
+  color: #eee;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.lista-menu > li > a {
+  text-decoration: none;
+  color: #eee;
+  &&:active {
+    opacity: 0.7;
+  }
+}
+
+.close-flotante {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+
+.visible {
+  display: flex;
+}
+
 .nav-mobile {
   width: 100%;
   display: flex;
@@ -86,10 +139,12 @@ body {
 }
 
 .menu-container {
+  z-index: 200;
+
   width: 30px;
   height: 30px;
   padding: 2px;
-  &&:hover {
+  /* &&:hover {
     :nth-child(1) {
       rotate: 45deg;
       translate: 0px 8px;
@@ -105,14 +160,39 @@ body {
     :nth-child(2) {
       background: transparent;
     }
-  }
+  } */
 }
 
 .linea {
+  position: relative;
   background-color: black;
   height: 4px;
   width: 100%;
   margin-bottom: 5px;
+}
+.close-menu {
+  position: absolute;
+  top: 50px;
+  /* margin-bottom: 25px; */
+}
+
+.close-menu :nth-child(1) {
+  rotate: 45deg;
+  translate: 0px 8px;
+  background-color: #eee;
+  z-index: 200;
+}
+.close-menu :nth-child(3) {
+  rotate: -45deg;
+  translate: 0px -10px;
+  z-index: 200;
+  background-color: #eee;
+}
+.close-menu :nth-child(2) {
+  background: transparent;
+}
+
+.clicked {
 }
 
 @media (min-width: 700px) {
@@ -152,7 +232,7 @@ body {
 
 .home_logo {
   width: 200px;
-  translate: 30px 110px;
+  translate: 20px 110px;
   z-index: 10;
   /* rotate: 20deg; */
   /* animation: logoAnimated 1s ease-in-out both; */
@@ -161,9 +241,9 @@ body {
 .card-fondo-logo {
   top: 90px;
   z-index: 0;
-  width: 400px;
+  width: 350px;
   border-radius: 100%;
-  height: 400px;
+  height: 350px;
   background-color: white;
   position: absolute;
 }
@@ -232,6 +312,12 @@ body {
 .img-ilustracion-secundaria {
   width: 100px;
   animation: mover 10s infinite linear alternate-reverse;
+}
+
+@media (max-width: 800px) {
+  .img-ilustracion-secundaria {
+    display: none;
+  }
 }
 
 @keyframes mover {
@@ -408,6 +494,9 @@ body {
   padding: 20px 15px;
   row-gap: 30px;
   margin: 30px auto;
+  background-color: white;
+  margin-bottom: 0;
+  padding-bottom: 70px;
   /* width: 90%; */
 }
 
@@ -598,7 +687,7 @@ body {
 
 .asesorate {
   padding: 25px 0;
-  margin-top: 100px;
+  /* margin-top: 100px; */
   height: auto;
   background-image: url("./img/background-pizza.jpg");
   background-repeat: no-repeat;
@@ -636,6 +725,7 @@ body {
   justify-content: center;
   align-items: center;
   row-gap: 25px;
+  background-color: white;
 }
 
 @media (min-width: 800px) {
@@ -677,7 +767,7 @@ body {
   /* margin-top: 50px; */
   background-image: url("./img/269.jpg");
   background-size: 100%;
-  height: 100vh;
+  height: auto;
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-evenly;
@@ -697,16 +787,19 @@ body {
   height: 400px;
   position: relative;
   width: 300px;
+  margin-bottom: 50px;
   /* border: 1px solid black; */
 }
 
 @media (min-width: 800px) {
   .section-gallery {
     flex-flow: row nowrap;
+    height: 80vh;
   }
   .slider-container {
     width: 30%;
     height: 80%;
+    margin: 0;
   }
 }
 .position {
@@ -755,9 +848,10 @@ body {
 /* Seccion opiniones clientes ***************** */
 
 .container-titulo-clientes {
-  margin: 50px auto;
-  padding: 0 20px;
+  margin: 0 auto;
+  padding: 50px 20px;
   font-size: 1.5rem;
+  background-color: white;
 }
 
 .opiniones-clientes {
@@ -821,7 +915,7 @@ body {
 
 @keyframes slidedown {
   0% {
-    translate: 0 0px;
+    translate: 0px 0px;
     opacity: 0.5;
     scale: 0.5;
   }
@@ -836,7 +930,30 @@ body {
 }
 
 .section-final {
-  height: 100vh;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #2b292a;
+  row-gap: 25px;
+}
+
+.footer-nombre-empresa {
+  color: #eee;
+}
+
+.footer-nombre-empresa > span {
+  color: #ec965c;
+}
+
+.section-final > a > button {
+  rotate: -90deg;
+}
+
+.flecha-footer,
+.icono-footer {
+  width: 50px;
 }
 
 @media (max-width: 800px) {
@@ -850,11 +967,11 @@ body {
 
 @keyframes down {
   from {
-    translate: 100px 0vh;
+    translate: 0px 0vh;
   }
 
   to {
-    translate: 100px 100vh;
+    translate: 0px 100vh;
   }
 }
 
