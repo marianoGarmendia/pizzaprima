@@ -192,9 +192,6 @@ body {
   background: transparent;
 }
 
-.clicked {
-}
-
 @media (min-width: 700px) {
   .nav-mobile {
     display: none;
